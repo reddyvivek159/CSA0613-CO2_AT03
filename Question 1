@@ -1,0 +1,17 @@
+Q29. Debugging Maximum–Minimum Finder Code (Improper Initialization for
+Negative Inputs)
+The following code attempts to find both minimum and maximum values in an array but fails
+for all-negative datasets due to incorrect initialization. Carefully identify the root cause of the
+problem and explain why the output becomes invalid. Debug the implementation step-by-step
+to correctly handle positive, negative, and mixed inputs. Optimize the logic for clarity and
+correctness without changing the brute force nature of the solution. Analyze the time
+complexity of the corrected algorithm. Rewrite the final code with proper documentation.
+def min_max(arr):
+mn = 0
+mx = 0
+for x in arr:
+if x < mn:
+mn = x
+if x > mx:
+mx = x
+return mn, mx
