@@ -1,0 +1,27 @@
+def min_max(arr):
+    if len(arr) == 0:
+        return None
+
+    mn = arr[0]
+    mx = arr[0]
+
+    for x in arr[1:]:
+        if x < mn:
+            mn = x
+
+        if x > mx:
+            mx = x
+
+    return mn, mx
+
+
+arr = list(map(int, input("Enter array elements separated by space: ").split()))
+
+result = min_max(arr)
+
+if result is None:
+    print("Array is empty.")
+else:
+    mn, mx = result
+    print("Minimum value:", mn)
+    print("Maximum value:", mx)
